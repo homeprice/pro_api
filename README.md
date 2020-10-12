@@ -1,3 +1,6 @@
+![HomepricePro Logo](/images/hppro.svg)
+Format: ![Alt Text](https://www.homeprice.es)
+
 # **HomePricePro** Valuation Service API
 
 With this service you'll be able to **POST a request** to our server with a pair of coordinates and some additional parameters and get back in return a professional valuation for the asset described.
