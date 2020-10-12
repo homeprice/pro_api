@@ -1,3 +1,3 @@
 Project under construction!
 
-This is service with which you'll be able to POST a request to our server with coordinates and some additional parameter and get a valuation for an asset in return.
+With this is service you'll be able to POST a request to our server with a pair of coordinates and some additional parameters and get back in return a professional valuation for the asset described.
