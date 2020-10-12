@@ -10,6 +10,7 @@ The information returned contains:
 * A tuple with all markers used for the valuation.
 * Formated HTML list for all markers used for the valuation.
 * Formated HTML code with the result.
+* The token provided in the code will grant you with 5 test valuations linked to your IP address.
 
 We have attached an HTML example for the request and a **JSON example** of return code.
 
@@ -25,6 +26,7 @@ La información devuelta contiene:
 * Un "tuple" con todos los marcadores utilizados para la valoración.
 * Una lista HTML formateada con todos los marcadores utilizados para la valoración.
 * Código HTML formateado con el resultado.
+* El token proporcionado en el código te otorgará 5 valoraciones de prueba vinculadas a tu dirección IP.
 
 Hemos adjuntado un ejemplo HTML para la solicitud y un **ejemplo JSON** de código retornado.
 
