@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="domIoT.eu">
+  <meta name="viewport" id="viewportMeta" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <title>HomePricePro API test</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="/static/css/main.css">
+
+</head>
+
+<body>
+  <div class="container bg-light">
+    <div class="container my-auto mx-auto bg-secondary text-white text-center">
+      HomePricePro API service test site
+    </div>
+    <div class="container pt-2 -pb-2">
+      <form id="calculate_form" method="post">
+        <input name="lat" value="41.1188827" hidden="">
+        <input name="lng" value="1.2444909" hidden="">
+        <input name="address" value="Tarragona, " hidden="">
+        <label for="id_housing_type_id">Tipo activo:</label>
+        <select name="housing_type_id" class="form-control" id="id_housing_type_id">
+          <option value="1">Vivienda unifamiliar aislada (chalet)</option>
+          <option value="2">Vivienda unifamiliar adosada (adosado)</option>
+          <option value="3" selected="">Piso</option>
+          <option value="4">Pareado</option>
+        </select>
+
+        <label for="id_conservation_id">Estado Conservación:</label>
+        <select name="conservation_id" class="form-control" id="id_conservation_id">
+          <option value="1">Muy Bajo</option>
+          <option value="2">Bajo</option>
+          <option value="3">Medio</option>
+          <option value="4" selected="">Bueno</option>
+          <option value="5">Excelente</option>
+          <option value="6">Desconoce</option>
+        </select>
+        <label for="id_quality_finishes_id">Acabados:</label>
+        <select name="quality_finishes_id" class="form-control" id="id_quality_finishes_id">
+          <option value="1">Muy Malos</option>
+          <option value="2">Malos</option>
+          <option value="3">Regulares</option>
+          <option value="4" selected="">Buenos</option>
+          <option value="5">Excelentes</option>
+        </select>
+        <label for="id_rooms">Habitaciones:</label><select name="rooms" class="form-control" id="id_rooms">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4" selected="">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        <label for="id_bathrooms">Aseos:</label>
+        <select name="bathrooms" class="form-control" id="id_bathrooms">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2" selected="">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        <label>Características:</label>
+        <ul id="id_features">
+          <li><label for="id_features_0"><input type="checkbox" name="features" value="laundry" id="id_features_0">
+              Lavadero</label>
+          </li>
+          <li><label for="id_features_1"><input type="checkbox" name="features" value="air_conditioner"
+                id="id_features_1">
+              Aire acondicionado</label>
+          </li>
+          <li><label for="id_features_2"><input type="checkbox" name="features" value="balcony" id="id_features_2">
+              Balcón</label>
+          </li>
+          <li><label for="id_features_3"><input type="checkbox" name="features" value="boxroom" id="id_features_3">
+              Trastero</label>
+          </li>
+          <li><label for="id_features_4"><input type="checkbox" name="features" value="double_glazed_window"
+                id="id_features_4">
+              Doble cristal</label>
+          </li>
+          <li><label for="id_features_5"><input type="checkbox" name="features" value="elevator" id="id_features_5">
+              Ascensor</label>
+          </li>
+          <li><label for="id_features_6"><input type="checkbox" name="features" value="garden" id="id_features_6">
+              Jardín</label>
+          </li>
+          <li><label for="id_features_7"><input type="checkbox" name="features" value="gas" id="id_features_7">
+              Gas</label>
+          </li>
+          <li><label for="id_features_8"><input type="checkbox" name="features" value="heating" id="id_features_8">
+              Calefacción</label>
+          </li>
+          <li><label for="id_features_9"><input type="checkbox" name="features" value="pool" id="id_features_9">
+              Piscina</label>
+          </li>
+          <li><label for="id_features_10"><input type="checkbox" name="features" value="solar_panel"
+                id="id_features_10">
+              Paneles solares</label>
+          </li>
+          <li><label for="id_features_11"><input type="checkbox" name="features" value="terrace" id="id_features_11">
+              Terraza</label>
+          </li>
+        </ul>
+        <label for="id_garage_id">Garaje:</label>
+        <select name="garage_id" class="form-control" id="id_garage_id">
+          <option value="0" selected="">Sin</option>
+          <option value="1">Interior</option>
+          <option value="2">Exterior</option>
+        </select>
+        <label for="id_sell_speed">Velocidad:</label><select name="sell_speed" class="form-control" id="id_sell_speed">
+          <option value="1">1 mes</option>
+          <option value="2">2 meses</option>
+          <option value="3" selected="">3 meses</option>
+          <option value="6">6 meses</option>
+          <option value="9">9 meses</option>
+          <option value="12">1 año</option>
+        </select>
+        <label for="id_area">Superficie:</label>
+        <input type="number" name="area" value="100" class="form-control" step="any" required="" id="id_area">
+        <label for="id_operation">Tipo operación:</label>
+        <select name="operation" class="form-control" id="id_operation">
+          <option value="compra">Compra</option>
+          <option value="alquiler">Alquiler</option>
+        </select>
+        <div class="mt-2 mb-2 bg-secondary text-center">
+          <input class="btn btn-success mt-2 mb-2" type="submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
