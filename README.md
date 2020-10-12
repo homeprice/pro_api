@@ -1,5 +1,4 @@
 ![HomepricePro Logo](/images/hppro.svg)
-Format: ![Alt Text](https://www.homeprice.es)
 
 # **HomePricePro** Valuation Service API
 
