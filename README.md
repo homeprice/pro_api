@@ -1,12 +1,12 @@
 ![HomepricePro Logo](/images/hppro.svg)
 
-# **HomePricePro** Valuation Service API
+# **HomePricePro** valuation Service API
 
 With this service you'll be able to **POST a request** to our server with a pair of coordinates and some additional parameters and get back in return a professional valuation for the asset described.
 
 The information returned contains:
 
-* Results
+* Results.
 * A tuple with all markers used for the valuation.
 * Formated HTML list for all markers used for the valuation.
 * Formated HTML code with the result.
@@ -22,7 +22,7 @@ Con este servicio podrás **ENVIAR una solicitud POST** a nuestro servidor con u
 
 La información devuelta contiene:
 
-* Resultados
+* Resultados.
 * Un "tuple" con todos los marcadores utilizados para la valoración.
 * Una lista HTML formateada con todos los marcadores utilizados para la valoración.
 * Código HTML formateado con el resultado.
