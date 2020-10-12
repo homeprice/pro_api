@@ -19,8 +19,8 @@
       HomePricePro API service test site
     </div>
     <div class="container pt-2 pb-2">
-      <form id="calculate_form" method="post" action="https://pro.homeprice.es/api">
-        <input name="token" value="" hidden>
+      <form id="calculate_form" method="post" action="https://www.pro.homeprice.es/api">
+        <input name="token" value="aaabbccddeeffgghhiii" hidden>  <!-- this a test token that allows to you go for 5 valuations -->
         <label for="id_lat">Latitud:</label>
         <input type="number" id="id_lat" name="lat" class="form-control" value="41.1188827">
         <label for="id_lng">Longitud:</label>
@@ -120,9 +120,9 @@
         </ul>
         <label for="id_garage_id">Garaje:</label>
         <select name="garage_id" class="form-control" id="id_garage_id">
-          <option value="0" selected="">Sin</option>
           <option value="1">Interior</option>
           <option value="2">Exterior</option>
+          <option value="3" selected="">Sin</option>
         </select>
         <label for="id_sell_speed">Velocidad:</label><select name="sell_speed" class="form-control" id="id_sell_speed">
           <option value="1">1 mes</option>
