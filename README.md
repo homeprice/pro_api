@@ -12,7 +12,8 @@ The information returned contains:
 * Formated HTML code with the result.
 * The token provided in the code will grant you with 5 test valuations linked to your IP address.
 
-We have attached an HTML example for the request and a **JSON example** of return code.
+We have attached an HTML example for the request with a **JSON example** of return code.
+We have also included a **CURL** example where you will see how JSON data may also be sent as request body. **(test.bat)**
 
 ## Feel free and have a try!
 
@@ -29,5 +30,6 @@ La información devuelta contiene:
 * El token proporcionado en el código te otorgará 5 valoraciones de prueba vinculadas a tu dirección IP.
 
 Hemos adjuntado un ejemplo HTML para la solicitud y un **ejemplo JSON** de código retornado.
+También hemos incluido un ejemplo de un **CURL** en el que podrás ver cómo también pueden enviarse datos JSON como cuerpo de la solicitud. **(test.bat)**
 
 ## !No lo dudes y pruébalo!

@@ -1,0 +1,27 @@
+{
+  "token": "aaabbccddeeffgghhiii",
+  "lat": 41.3827775,
+  "lng": 2.1582234,
+  "operation": "compra",
+  "rooms": "4",
+  "bathrooms": "2",
+  "area": "100",
+  "housing_type_id": 1,
+  "conservation_id": 3,
+  "quality_finishes_id": 3,
+  "garage_id": 2,
+  "features": {
+    "laundry": true,
+    "terrace": true,
+    "double_glazed_window": true,
+    "elevator": true,
+    "heating": true,
+    "balcony": true,
+    "garden": true,
+    "air_conditioner": true,
+    "boxroom": true,
+    "solar_panel": true,
+    "pool": true,
+    "gas": false
+  }
+}

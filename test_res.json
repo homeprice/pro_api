@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="robots" content="NONE,NOARCHIVE">
+  <title>AttributeError
+          at /api</title>
+  <style type="text/css">
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; background-color:#fff; color:#000; }
+    body>div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; }
+    h2 { margin-bottom:.8em; }
+    h3 { margin:1em 0 .5em 0; }
+    h4 { margin:0 0 .5em 0; font-weight: normal; }
+    code, pre { font-size: 100%; white-space: pre-wrap; }
+    table { border:1px solid #ccc; border-collapse: collapse; width:100%; background:white; }
+    tbody td, tbody th { vertical-align:top; padding:2px 3px; }
+    thead th {
+      padding:1px 6px 1px 3px; background:#fefefe; text-align:left;
+      font-weight:normal; font-size:11px; border:1px solid #ddd;
+    }
+    tbody th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    table.vars { margin:5px 0 2px 40px; }
+    table.vars td, table.req td { font-family:monospace; }
+    table td.code { width:100%; }
+    table td.code pre { overflow:hidden; }
+    table.source th { color:#666; }
+    table.source td { font-family:monospace; white-space:pre; border-bottom:1px solid #eee; }
+    ul.traceback { list-style-type:none; color: #222; }
+    ul.traceback li.frame { padding-bottom:1em; color:#4f4f4f; }
+    ul.traceback li.user { background-color:#e0e0e0; color:#000 }
+    div.context { padding:10px 0; overflow:hidden; }
+    div.context ol { padding-left:30px; margin:0 10px; list-style-position: inside; }
+    div.context ol li { font-family:monospace; white-space:pre; color:#777; cursor:pointer; padding-left: 2px; }
+    div.context ol li pre { display:inline; }
+    div.context ol.context-line li { color:#464646; background-color:#dfdfdf; padding: 3px 2px; }
+    div.context ol.context-line li span { position:absolute; right:32px; }
+    .user div.context ol.context-line li { background-color:#bbb; color:#000; }
+    .user div.context ol li { color:#666; }
+    div.commands { margin-left: 40px; }
+    div.commands a { color:#555; text-decoration:none; }
+    .user div.commands a { color: black; }
+    #summary { background: #ffc; }
+    #summary h2 { font-weight: normal; color: #666; }
+    #explanation { background:#eee; }
+    #template, #template-not-exist { background:#f6f6f6; }
+    #template-not-exist ul { margin: 0 0 10px 20px; }
+    #template-not-exist .postmortem-section { margin-bottom: 3px; }
+    #unicode-hint { background:#eee; }
+    #traceback { background:#eee; }
+    #requestinfo { background:#f6f6f6; padding-left:120px; }
+    #summary table { border:none; background:transparent; }
+    #requestinfo h2, #requestinfo h3 { position:relative; margin-left:-100px; }
+    #requestinfo h3 { margin-bottom:-1em; }
+    .error { background: #ffc; }
+    .specific { color:#cc3300; font-weight:bold; }
+    h2 span.commands { font-size:.7em; font-weight:normal; }
+    span.commands a:link {color:#5E5694;}
+    pre.exception_value { font-family: sans-serif; color: #575757; font-size: 1.5em; margin: 10px 0 10px 0; }
+    .append-bottom { margin-bottom: 10px; }
+    .fname { user-select: all; }
+  </style>
+  
+  <script>
+    function hideAll(elems) {
+      for (var e = 0; e < elems.length; e++) {
+        elems[e].style.display = 'none';
+      }
+    }
+    window.onload = function() {
+      hideAll(document.querySelectorAll('table.vars'));
+      hideAll(document.querySelectorAll('ol.pre-context'));
+      hideAll(document.querySelectorAll('ol.post-context'));
+      hideAll(document.querySelectorAll('div.pastebin'));
+    }
+    function toggle() {
+      for (var i = 0; i < arguments.length; i++) {
+        var e = document.getElementById(arguments[i]);
+        if (e) {
+          e.style.display = e.style.display == 'none' ? 'block': 'none';
+        }
+      }
+      return false;
+    }
+    function varToggle(link, id) {
+      toggle('v' + id);
+      var s = link.getElementsByTagName('span')[0];
+      var uarr = String.fromCharCode(0x25b6);
+      var darr = String.fromCharCode(0x25bc);
+      s.textContent = s.textContent == uarr ? darr : uarr;
+      return false;
+    }
+    function switchPastebinFriendly(link) {
+      s1 = "Switch to copy-and-paste view";
+      s2 = "Switch back to interactive view";
+      link.textContent = link.textContent.trim() == s1 ? s2: s1;
+      toggle('browserTraceback', 'pastebinTraceback');
+      return false;
+    }
+  </script>
+  
+</head>
+<body>
+<div id="summary">
+  <h1>AttributeError
+       at /api</h1>
+  <pre class="exception_value">&#x27;int&#x27; object has no attribute &#x27;isnumeric&#x27;</pre>
+  <table class="meta">
+
+    <tr>
+      <th>Request Method:</th>
+      <td>POST</td>
+    </tr>
+    <tr>
+      <th>Request URL:</th>
+      <td>https://pro.homeprice.es/api</td>
+    </tr>
+
+    <tr>
+      <th>Django Version:</th>
+      <td>3.1.2</td>
+    </tr>
+
+    <tr>
+      <th>Exception Type:</th>
+      <td>AttributeError</td>
+    </tr>
+
+
+    <tr>
+      <th>Exception Value:</th>
+      <td><pre>&#x27;int&#x27; object has no attribute &#x27;isnumeric&#x27;</pre></td>
+    </tr>
+
+
+    <tr>
+      <th>Exception Location:</th>
+      <td><span class="fname">/srv/hppro/views.py</span>, line 567, in api</td>
+    </tr>
+
+    <tr>
+      <th>Python Executable:</th>
+      <td>/opt/python3.8/bin/python3</td>
+    </tr>
+    <tr>
+      <th>Python Version:</th>
+      <td>3.8.5</td>
+    </tr>
+    <tr>
+      <th>Python Path:</th>
+      <td><pre>[&#x27;/srv&#x27;,
+ &#x27;/layers/google.python.webserver/gunicorn/bin&#x27;,
+ &#x27;/layers/google.python.pip/pip&#x27;,
+ &#x27;/layers/google.python.webserver/gunicorn&#x27;,
+ &#x27;/opt/python3.8/lib/python38.zip&#x27;,
+ &#x27;/opt/python3.8/lib/python3.8&#x27;,
+ &#x27;/opt/python3.8/lib/python3.8/lib-dynload&#x27;,
+ &#x27;/opt/python3.8/lib/python3.8/site-packages&#x27;]</pre></td>
+    </tr>
+    <tr>
+      <th>Server time:</th>
+      <td>Thu, 15 Oct 2020 16:19:10 +0200</td>
+    </tr>
+  </table>
+</div>
+
+
+
+
+<div id="traceback">
+  <h2>Traceback <span class="commands"><a href="#" onclick="return switchPastebinFriendly(this);">
+    Switch to copy-and-paste view</a></span>
+  </h2>
+  <div id="browserTraceback">
+    <ul class="traceback">
+      
+        
+        <li class="frame django">
+          <code class="fname">/layers/google.python.pip/pip/django/core/handlers/exception.py</code>, line 47, in inner
+
+          
+            <div class="context" id="c68982524006848">
+              
+                <ol start="40" class="pre-context" id="pre68982524006848">
+                
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre>                response = await sync_to_async(response_for_exception)(request, exc)</pre></li>
+                
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre>            return response</pre></li>
+                
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre>        return inner</pre></li>
+                
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre>    else:</pre></li>
+                
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre>        @wraps(get_response)</pre></li>
+                
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre>        def inner(request):</pre></li>
+                
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre>            try:</pre></li>
+                
+                </ol>
+              
+              <ol start="47" class="context-line">
+                <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre>                response = get_response(request)</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='48' class="post-context" id="post68982524006848">
+                  
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre>            except Exception as exc:</pre></li>
+                  
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre>                response = response_for_exception(request, exc)</pre></li>
+                  
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre>            return response</pre></li>
+                  
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre>        return inner</pre></li>
+                  
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre68982524006848', 'post68982524006848')"><pre></pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '68982524006848')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v68982524006848">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>exc</td>
+                    <td class="code"><pre>AttributeError(&quot;&#x27;int&#x27; object has no attribute &#x27;isnumeric&#x27;&quot;)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>get_response</td>
+                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x3ebd410c4c40&gt;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: POST &#x27;/api&#x27;&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code class="fname">/layers/google.python.pip/pip/django/core/handlers/base.py</code>, line 179, in _get_response
+
+          
+            <div class="context" id="c68982523860992">
+              
+                <ol start="172" class="pre-context" id="pre68982523860992">
+                
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre>        if response is None:</pre></li>
+                
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
+                
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre>            # If it is an asynchronous view, run it in a subthread.</pre></li>
+                
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre>            if asyncio.iscoroutinefunction(wrapped_callback):</pre></li>
+                
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre></li>
+                
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre>            try:</pre></li>
+                
+                </ol>
+              
+              <ol start="179" class="context-line">
+                <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='180' class="post-context" id="post68982523860992">
+                  
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre>            except Exception as e:</pre></li>
+                  
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
+                  
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre>                if response is None:</pre></li>
+                  
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre>                    raise</pre></li>
+                  
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre68982523860992', 'post68982523860992')"><pre>        # Complain if the view returned None (a common error).</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '68982523860992')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v68982523860992">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>callback</td>
+                    <td class="code"><pre>&lt;function api at 0x3ebd3f5909d0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>callback_args</td>
+                    <td class="code"><pre>()</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>callback_kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>middleware_method</td>
+                    <td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;django.middleware.csrf.CsrfViewMiddleware object at 0x3ebd4010bb20&gt;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: POST &#x27;/api&#x27;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>response</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x3ebd410c4c40&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>wrapped_callback</td>
+                    <td class="code"><pre>&lt;function api at 0x3ebd3f5909d0&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          <code class="fname">/layers/google.python.pip/pip/django/views/decorators/csrf.py</code>, line 54, in wrapped_view
+
+          
+            <div class="context" id="c68982523959232">
+              
+                <ol start="47" class="pre-context" id="pre68982523959232">
+                
+                  <li onclick="toggle('pre68982523959232', 'post68982523959232')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre68982523959232', 'post68982523959232')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre68982523959232', 'post68982523959232')"><pre>def csrf_exempt(view_func):</pre></li>
+                
+                  <li onclick="toggle('pre68982523959232', 'post68982523959232')"><pre>    &quot;&quot;&quot;Mark a view function as being exempt from the CSRF view protection.&quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre68982523959232', 'post68982523959232')"><pre>    # view_func.csrf_exempt = True would also work, but decorators are nicer</pre></li>
+                
+                  <li onclick="toggle('pre68982523959232', 'post68982523959232')"><pre>    # if they don&#x27;t have side effects, so return a new function.</pre></li>
+                
+                  <li onclick="toggle('pre68982523959232', 'post68982523959232')"><pre>    def wrapped_view(*args, **kwargs):</pre></li>
+                
+                </ol>
+              
+              <ol start="54" class="context-line">
+                <li onclick="toggle('pre68982523959232', 'post68982523959232')"><pre>        return view_func(*args, **kwargs)</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='55' class="post-context" id="post68982523959232">
+                  
+                  <li onclick="toggle('pre68982523959232', 'post68982523959232')"><pre>    wrapped_view.csrf_exempt = True</pre></li>
+                  
+                  <li onclick="toggle('pre68982523959232', 'post68982523959232')"><pre>    return wraps(view_func)(wrapped_view)</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '68982523959232')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v68982523959232">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>args</td>
+                    <td class="code"><pre>(&lt;WSGIRequest: POST &#x27;/api&#x27;&gt;,)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>view_func</td>
+                    <td class="code"><pre>&lt;function api at 0x3ebd3f5908b0&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+        
+        <li class="frame user">
+          <code class="fname">/srv/hppro/views.py</code>, line 567, in api
+
+          
+            <div class="context" id="c68982526971136">
+              
+                <ol start="560" class="pre-context" id="pre68982526971136">
+                
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>            # r += f&quot;{sqm._meta.get_field(&#x27;f_150_2_250&#x27;).verbose_name}, {sqm.f_150_2_250*100:.2f}%&quot;</pre></li>
+                
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>        elif area &gt; 250:</pre></li>
+                
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>            price_cor += meter_price * sqm.g_150</pre></li>
+                
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>            # r += f&quot;{sqm._meta.get_field(&#x27;g_150&#x27;).verbose_name}, {sqm.g_150*100:.2f}%&quot;</pre></li>
+                
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>        # r += &quot;&lt;br&gt;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>        characteristics = {}</pre></li>
+                
+                </ol>
+              
+              <ol start="567" class="context-line">
+                <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>        if &#x27;housing_type_id&#x27; in json_data and json_data[</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='568' class="post-context" id="post68982526971136">
+                  
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>                &#x27;housing_type_id&#x27;].isnumeric():</pre></li>
+                  
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>            try:</pre></li>
+                  
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>                tipus = Tipus.objects.get(user=user)</pre></li>
+                  
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>            except Tipus.DoesNotExist as e:</pre></li>
+                  
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>                try:</pre></li>
+                  
+                  <li onclick="toggle('pre68982526971136', 'post68982526971136')"><pre>                    tipus = Tipus.objects.get(user=1)</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            <div class="commands">
+                
+                    <a href="#" onclick="return varToggle(this, '68982526971136')"><span>&#x25b6;</span> Local vars</a>
+                
+            </div>
+            <table class="vars" id="v68982526971136">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>api_r</td>
+                    <td class="code"><pre>{&#x27;area_max&#x27;: 100.0,
+ &#x27;area_min&#x27;: 100.0,
+ &#x27;bathrooms&#x27;: 2.0,
+ &#x27;radious&#x27;: 100.0,
+ &#x27;rooms&#x27;: 4}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>area</td>
+                    <td class="code"><pre>100.0</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>area_max</td>
+                    <td class="code"><pre>100.0</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>area_min</td>
+                    <td class="code"><pre>100.0</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>bathrooms</td>
+                    <td class="code"><pre>2.0</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>c</td>
+                    <td class="code"><pre>9</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>characteristics</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>e</td>
+                    <td class="code"><pre>2.158992930213411</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>f</td>
+                    <td class="code"><pre>&lt;Fotos: Fotos object (cd63860fb92fff78e466aebd023679d2)&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>ip</td>
+                    <td class="code"><pre>&#x27;46.253.42.126&#x27;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>json_data</td>
+                    <td class="code"><pre>{&#x27;area&#x27;: &#x27;100&#x27;,
+ &#x27;bathrooms&#x27;: &#x27;2&#x27;,
+ &#x27;conservation_id&#x27;: 3,
+ &#x27;features&#x27;: {&#x27;air_conditioner&#x27;: True,
+              &#x27;balcony&#x27;: True,
+              &#x27;boxroom&#x27;: True,
+              &#x27;double_glazed_window&#x27;: True,
+              &#x27;elevator&#x27;: True,
+              &#x27;garden&#x27;: True,
+              &#x27;gas&#x27;: False,
+              &#x27;heating&#x27;: True,
+              &#x27;laundry&#x27;: True,
+              &#x27;pool&#x27;: True,
+              &#x27;solar_panel&#x27;: True,
+              &#x27;terrace&#x27;: True},
+ &#x27;garage_id&#x27;: 2,
+ &#x27;housing_type_id&#x27;: 1,
+ &#x27;lat&#x27;: 41.3827775,
+ &#x27;lng&#x27;: 2.1582234,
+ &#x27;operation&#x27;: &#x27;compra&#x27;,
+ &#x27;quality_finishes_id&#x27;: 3,
+ &#x27;rooms&#x27;: &#x27;4&#x27;,
+ &#x27;token&#x27;: &#x27;aaabbccddeeffgghhiii&#x27;}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>markers</td>
+                    <td class="code"><pre>[{&#x27;address&#x27;: &#x27;Gran Via de Les Corts Catalanes , 517 , Barcelona Capital&#x27;,
+  &#x27;city&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;des_refcatastral&#x27;: &#x27;&#x27;,
+  &#x27;distance&#x27;: 0.09285086960359985,
+  &#x27;dorm_banys_aseos&#x27;: &#x27;4d/2b/0a&#x27;,
+  &#x27;lat&#x27;: Decimal(&#x27;41.3819700&#x27;),
+  &#x27;lng&#x27;: Decimal(&#x27;2.1579400&#x27;),
+  &#x27;meter_cons&#x27;: 180.0,
+  &#x27;photo&#x27;: &#x27;https://images.inmofactory.com/inmofactory/documents/1/91297/20596274/297793744.jpg&#x27;,
+  &#x27;pk&#x27;: &#x27;4f1f549ab58ee45a894fefca144d1ed5&#x27;,
+  &#x27;portal&#x27;: &#x27;Fotocasa&#x27;,
+  &#x27;price&#x27;: 795000.0,
+  &#x27;province&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;tipologia&#x27;: &#x27;Piso&#x27;},
+ {&#x27;address&#x27;: &#x27;, 8&#x27;,
+  &#x27;city&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;des_refcatastral&#x27;: &#x27;&#x27;,
+  &#x27;distance&#x27;: 0.09285086960359985,
+  &#x27;dorm_banys_aseos&#x27;: &#x27;4d/2b/0a&#x27;,
+  &#x27;floor&#x27;: &#x27;8&#x27;,
+  &#x27;lat&#x27;: Decimal(&#x27;41.3819700&#x27;),
+  &#x27;lng&#x27;: Decimal(&#x27;2.1579400&#x27;),
+  &#x27;meter_cons&#x27;: 180.0,
+  &#x27;photo&#x27;: &#x27;http://fotos.imghs.net/xl//1018/274/1018_20596274_0_2020030620035919740.jpg&#x27;,
+  &#x27;pk&#x27;: &#x27;a286459d427dc50b014af11b110a9dc6&#x27;,
+  &#x27;portal&#x27;: &#x27;Pisos.com&#x27;,
+  &#x27;price&#x27;: 795000.0,
+  &#x27;province&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;tipologia&#x27;: &#x27;Piso&#x27;},
+ {&#x27;address&#x27;: &#x27;CORTS CATALANES , 519&#x27;,
+  &#x27;city&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;des_refcatastral&#x27;: &#x27;&#x27;,
+  &#x27;distance&#x27;: 0.09100505477246318,
+  &#x27;dorm_banys_aseos&#x27;: &#x27;4d/2b/0a&#x27;,
+  &#x27;lat&#x27;: Decimal(&#x27;41.3819860&#x27;),
+  &#x27;lng&#x27;: Decimal(&#x27;2.1579459&#x27;),
+  &#x27;meter_cons&#x27;: 180.0,
+  &#x27;photo&#x27;: &#x27;https://img3.idealista.com/blur/WEB_LISTING-M/0/id.pro.es.image.master/00/3c/37/758769977.jpg&#x27;,
+  &#x27;pk&#x27;: &#x27;3fc3811d57a525f4651ee00f275f96eb&#x27;,
+  &#x27;portal&#x27;: &#x27;Idealista&#x27;,
+  &#x27;price&#x27;: 795000.0,
+  &#x27;province&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;tipologia&#x27;: &#x27;Piso&#x27;,
+  &#x27;url&#x27;: &#x27;https://www.idealista.com/inmueble/88922821&#x27;},
+ {&#x27;address&#x27;: &#x27;Esquerra Baixa de lEixample Gran Via Corts Catalanes , 519 , &#x27;
+             &#x27;Barcelona&#x27;,
+  &#x27;city&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;des_refcatastral&#x27;: &#x27;&#x27;,
+  &#x27;distance&#x27;: 0.09100505477246318,
+  &#x27;dorm_banys_aseos&#x27;: &#x27;4d/2b/0a&#x27;,
+  &#x27;lat&#x27;: Decimal(&#x27;41.3819860&#x27;),
+  &#x27;lng&#x27;: Decimal(&#x27;2.1579459&#x27;),
+  &#x27;meter_cons&#x27;: 160.0,
+  &#x27;photo&#x27;: &#x27;https://images.habimg.com/imgh/3203-3756071/balcon-piso-barcelona_3203-img3756071-60868475XL.jpg&#x27;,
+  &#x27;pk&#x27;: &#x27;f4bc692f920972de92a6695353c315c9&#x27;,
+  &#x27;portal&#x27;: &#x27;Habitaclia&#x27;,
+  &#x27;price&#x27;: 795000.0,
+  &#x27;province&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;tipologia&#x27;: &#x27;Piso&#x27;,
+  &#x27;url&#x27;: &#x27;https://www.habitaclia.com/comprar-piso-con_terraza_de_20_metros_gran_via_corts_catalanes_519_esquerra_baixa_de_l_eixample-barcelona-i3203003756071.htm?pag=256==c=list=55&#x27;},
+ {&#x27;address&#x27;: &#x27;Esquerra Baixa de lEixample , Barcelona&#x27;,
+  &#x27;city&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;des_refcatastral&#x27;: &#x27;&#x27;,
+  &#x27;distance&#x27;: 0.09089539808077957,
+  &#x27;dorm_banys_aseos&#x27;: &#x27;4d/2b/0a&#x27;,
+  &#x27;lat&#x27;: Decimal(&#x27;41.3819870&#x27;),
+  &#x27;lng&#x27;: Decimal(&#x27;2.1579460&#x27;),
+  &#x27;meter_cons&#x27;: 175.0,
+  &#x27;photo&#x27;: &#x27;https://images.habimg.com/imgh/28371-3766946/bathroom-piso-barcelona_28371-img3766946-3556XL.jpg&#x27;,
+  &#x27;pk&#x27;: &#x27;3dfc75050e523e4ac9169d1dc0b1b7c3&#x27;,
+  &#x27;portal&#x27;: &#x27;Habitaclia&#x27;,
+  &#x27;price&#x27;: 795000.0,
+  &#x27;province&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;tipologia&#x27;: &#x27;Piso&#x27;,
+  &#x27;url&#x27;: &#x27;https://www.habitaclia.com/comprar-piso-magnafico_y_luminoso_en_eixample_esquerra_esquerra_baixa_de_l_eixample-barcelona-i28371003766946.htm?pag=597==c=list=55&#x27;},
+ {&#x27;address&#x27;: &#x27;Esquerra Baixa de lEixample Gran Via de les Corts Catalanes , &#x27;
+             &#x27;Barcelona&#x27;,
+  &#x27;city&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;des_refcatastral&#x27;: &#x27;&#x27;,
+  &#x27;distance&#x27;: 0.08941254508273695,
+  &#x27;dorm_banys_aseos&#x27;: &#x27;4d/2b/0a&#x27;,
+  &#x27;lat&#x27;: Decimal(&#x27;41.3820000&#x27;),
+  &#x27;lng&#x27;: Decimal(&#x27;2.1579500&#x27;),
+  &#x27;meter_cons&#x27;: 175.0,
+  &#x27;photo&#x27;: &#x27;https://images.habimg.com/imgh/4737-3785973/piso-con-terraza-en-lâ€™esquerra-de-lâ€™eixample-barcelona_4737-img3785973-68388517XL.jpg&#x27;,
+  &#x27;pk&#x27;: &#x27;f46f235f101933fc450e77f1f4fde328&#x27;,
+  &#x27;portal&#x27;: &#x27;Habitaclia&#x27;,
+  &#x27;price&#x27;: 795000.0,
+  &#x27;province&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;tipologia&#x27;: &#x27;Piso&#x27;},
+ {&#x27;address&#x27;: &#x27;Esquerra Baixa de lEixample , Barcelona&#x27;,
+  &#x27;city&#x27;: &#x27;Barcelona&#x27;,
+  &#x27;des_refcatastral&#x27;: &#x27;&#x27;,
+  &#x27;distance&#x27;: 0.0744663141826785,
+  &#x27;dorm_banys_aseos&#x27;: &#x27;4d/2b/0a&#x27;,
+  &#x27;lat&#x27;: Decimal(&#x27;41.3821400&#x27;),
+  &#x27;lng&#x27;: Decimal(&#x27;2.1579500&#x27;),
+  &#x27;meter_cons&#x27;: 140.0,
+  &#x27;photo&#x27;: &#x27;https://images.habimg.com/imgh/11117-2442250/piso-con-4-habitaciones-con-ascensor-calefaccion-y-aire-acondicionado-barcelona_11117-img2442250-74311852XL.jpg&#x27;,
+  &#x27;pk&#x27;: &#x27;ce91e583f5d4b3a66b05c60239b8aa2d&#x27;,
+  &#x27;portal&#x27;: &#x27;Habitaclia&#x27;,
+  &#x27;price&#x27;: 630000.0,
+  &#x27;province&#x27;: &#x27;… &lt;trimmed 5172 bytes string&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>markers_html</td>
+                    <td class="code"><pre>[&#x27;4f1f549ab58ee45a894fefca144d1ed5, 795,000€, 180.00m², 4,417€/m², &#x27;
+ &#x27;&lt;u&gt;Fotocasa&lt;/u&gt;, Gran Via de Les Corts Catalanes , 517 , Barcelona Capital&#x27;,
+ &#x27;a286459d427dc50b014af11b110a9dc6, 795,000€, 180.00m², 4,417€/m², &#x27;
+ &#x27;&lt;u&gt;Pisos.com&lt;/u&gt;, , 8&#x27;,
+ &#x27;&lt;a id=&quot;pk&quot; href=&quot;https://www.idealista.com/inmueble/88922821&quot; &#x27;
+ &#x27;target=&quot;_blank&quot;&gt;3fc3811d57a525f4651ee00f275f96eb&lt;/a&gt;, 795,000€, 180.00m², &#x27;
+ &#x27;4,417€/m², &lt;u&gt;Idealista&lt;/u&gt;, CORTS CATALANES , 519&#x27;,
+ &#x27;&lt;a id=&quot;pk&quot; &#x27;
+ &#x27;href=&quot;https://www.habitaclia.com/comprar-piso-con_terraza_de_20_metros_gran_via_corts_catalanes_519_esquerra_baixa_de_l_eixample-barcelona-i3203003756071.htm?pag=256==c=list=55&quot; &#x27;
+ &#x27;target=&quot;_blank&quot;&gt;f4bc692f920972de92a6695353c315c9&lt;/a&gt;, 795,000€, 160.00m², &#x27;
+ &#x27;4,969€/m², &lt;u&gt;Habitaclia&lt;/u&gt;, Esquerra Baixa de lEixample Gran Via Corts &#x27;
+ &#x27;Catalanes , 519 , Barcelona&#x27;,
+ &#x27;&lt;a id=&quot;pk&quot; &#x27;
+ &#x27;href=&quot;https://www.habitaclia.com/comprar-piso-magnafico_y_luminoso_en_eixample_esquerra_esquerra_baixa_de_l_eixample-barcelona-i28371003766946.htm?pag=597==c=list=55&quot; &#x27;
+ &#x27;target=&quot;_blank&quot;&gt;3dfc75050e523e4ac9169d1dc0b1b7c3&lt;/a&gt;, 795,000€, 175.00m², &#x27;
+ &#x27;4,543€/m², &lt;u&gt;Habitaclia&lt;/u&gt;, Esquerra Baixa de lEixample , Barcelona&#x27;,
+ &#x27;f46f235f101933fc450e77f1f4fde328, 795,000€, 175.00m², 4,543€/m², &#x27;
+ &#x27;&lt;u&gt;Habitaclia&lt;/u&gt;, Esquerra Baixa de lEixample Gran Via de les Corts &#x27;
+ &#x27;Catalanes , Barcelona&#x27;,
+ &#x27;ce91e583f5d4b3a66b05c60239b8aa2d, 630,000€, 140.00m², 4,500€/m², &#x27;
+ &#x27;&lt;u&gt;Habitaclia&lt;/u&gt;, Esquerra Baixa de lEixample , Barcelona&#x27;,
+ &#x27;2cc1f7ef1f9490be5a5344e334c84abb, 740,000€, 153.00m², 4,837€/m², &#x27;
+ &#x27;&lt;u&gt;Fotocasa&lt;/u&gt;, DiputaciÃ³ , Barcelona Capital&#x27;,
+ &#x27;&lt;a id=&quot;pk&quot; &#x27;
+ &#x27;href=&quot;https://www.fotocasa.es/es/comprar/vivienda/barcelona-capital/calefaccion-ascensor/153770071/d&quot; &#x27;
+ &#x27;target=&quot;_blank&quot;&gt;cd63860fb92fff78e466aebd023679d2&lt;/a&gt;, 720,000€, 140.00m², &#x27;
+ &#x27;5,143€/m², &lt;u&gt;Fotocasa&lt;/u&gt;, Carrer de Villarroel , Barcelona Capital&#x27;]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>meter_price</td>
+                    <td class="code"><pre>0</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>mres</td>
+                    <td class="code"><pre>{&#x27;address&#x27;: &#x27;Carrer de Villarroel , Barcelona Capital&#x27;,
+ &#x27;city&#x27;: &#x27;Barcelona&#x27;,
+ &#x27;des_refcatastral&#x27;: &#x27;&#x27;,
+ &#x27;distance&#x27;: 0.10049304670863264,
+ &#x27;dorm_banys_aseos&#x27;: &#x27;4d/1b/0a&#x27;,
+ &#x27;lat&#x27;: Decimal(&#x27;41.3835400&#x27;),
+ &#x27;lng&#x27;: Decimal(&#x27;2.1588700&#x27;),
+ &#x27;meter_cons&#x27;: 140.0,
+ &#x27;photo&#x27;: &#x27;https://d.inmofactory.com/1/93843/19335512/280908232.jpg&#x27;,
+ &#x27;pk&#x27;: &#x27;cd63860fb92fff78e466aebd023679d2&#x27;,
+ &#x27;portal&#x27;: &#x27;Fotocasa&#x27;,
+ &#x27;price&#x27;: 720000.0,
+ &#x27;province&#x27;: &#x27;Barcelona&#x27;,
+ &#x27;tipologia&#x27;: &#x27;Piso&#x27;,
+ &#x27;url&#x27;: &#x27;https://www.fotocasa.es/es/comprar/vivienda/barcelona-capital/calefaccion-ascensor/153770071/d&#x27;}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>mres_html</td>
+                    <td class="code"><pre>(&#x27;&lt;a id=&quot;pk&quot; &#x27;
+ &#x27;href=&quot;https://www.fotocasa.es/es/comprar/vivienda/barcelona-capital/calefaccion-ascensor/153770071/d&quot; &#x27;
+ &#x27;target=&quot;_blank&quot;&gt;cd63860fb92fff78e466aebd023679d2&lt;/a&gt;, 720,000€, 140.00m², &#x27;
+ &#x27;5,143€/m², &lt;u&gt;Fotocasa&lt;/u&gt;, Carrer de Villarroel , Barcelona Capital&#x27;)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>n</td>
+                    <td class="code"><pre>41.383682149900494</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>new_meter_price</td>
+                    <td class="code"><pre>4642.6580817512195</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>new_price</td>
+                    <td class="code"><pre>464265.80817512196</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>operation</td>
+                    <td class="code"><pre>&#x27;compra&#x27;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>prc</td>
+                    <td class="code"><pre>[795000.0,
+ 795000.0,
+ 795000.0,
+ 795000.0,
+ 795000.0,
+ 795000.0,
+ 630000.0,
+ 740000.0,
+ 720000.0]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>preu</td>
+                    <td class="code"><pre>720000.0</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>price_cor</td>
+                    <td class="code"><pre>0.0</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>r</td>
+                    <td class="code"><pre>(&#x27;Encontrados 9 registros en 100m&lt;br&gt;Entre las superficies: 100m² - 100m²&lt;br&gt; &#x27;
+ &#x27;4 habitaciones&lt;br&gt;&#x27;)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>rad</td>
+                    <td class="code"><pre>0</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>radious</td>
+                    <td class="code"><pre>[0.1, 0.15, 0.25, 0.5, 1, 1.5, 2, 3, 5, 7.5, 10, 15]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>rep</td>
+                    <td class="code"><pre>[4416.666666666667,
+ 4416.666666666667,
+ 4416.666666666667,
+ 4968.75,
+ 4542.857142857143,
+ 4542.857142857143,
+ 4500.0,
+ 4836.601307189542,
+ 5142.857142857143]</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>rep_tmp</td>
+                    <td class="code"><pre>5142.857142857143</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: POST &#x27;/api&#x27;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>rooms</td>
+                    <td class="code"><pre>4</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>s</td>
+                    <td class="code"><pre>41.38187285009951</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>sqm</td>
+                    <td class="code"><pre>&lt;Sqm: 1-admin&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>start_time</td>
+                    <td class="code"><pre>1602771549.94449</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>sup_range</td>
+                    <td class="code"><pre>0.25</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>t</td>
+                    <td class="code"><pre>&lt;Ubicacion: cd63860fb92fff78e466aebd023679d2-Barcelona-Barcelona&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>test</td>
+                    <td class="code"><pre>&lt;Test: None-admin&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>testimonis</td>
+                    <td class="code"><pre>&lt;QuerySet [&lt;Ubicacion: 4f1f549ab58ee45a894fefca144d1ed5-Barcelona-Barcelona&gt;, &lt;Ubicacion: a286459d427dc50b014af11b110a9dc6-Barcelona-Barcelona&gt;, &lt;Ubicacion: 3fc3811d57a525f4651ee00f275f96eb-Barcelona-Barcelona&gt;, &lt;Ubicacion: f4bc692f920972de92a6695353c315c9-Barcelona-Barcelona&gt;, &lt;Ubicacion: 3dfc75050e523e4ac9169d1dc0b1b7c3-Barcelona-Barcelona&gt;, &lt;Ubicacion: f46f235f101933fc450e77f1f4fde328-Barcelona-Barcelona&gt;, &lt;Ubicacion: ce91e583f5d4b3a66b05c60239b8aa2d-Barcelona-Barcelona&gt;, &lt;Ubicacion: 2cc1f7ef1f9490be5a5344e334c84abb-Barcelona-Barcelona&gt;, &lt;Ubicacion: cd63860fb92fff78e466aebd023679d2-Barcelona-Barcelona&gt;]&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>testimonis_old</td>
+                    <td class="code"><pre>&lt;QuerySet [&lt;Ubicacion: 4f1f549ab58ee45a894fefca144d1ed5-Barcelona-Barcelona&gt;, &lt;Ubicacion: a286459d427dc50b014af11b110a9dc6-Barcelona-Barcelona&gt;, &lt;Ubicacion: 3fc3811d57a525f4651ee00f275f96eb-Barcelona-Barcelona&gt;, &lt;Ubicacion: f4bc692f920972de92a6695353c315c9-Barcelona-Barcelona&gt;, &lt;Ubicacion: 3dfc75050e523e4ac9169d1dc0b1b7c3-Barcelona-Barcelona&gt;, &lt;Ubicacion: f46f235f101933fc450e77f1f4fde328-Barcelona-Barcelona&gt;, &lt;Ubicacion: ce91e583f5d4b3a66b05c60239b8aa2d-Barcelona-Barcelona&gt;, &lt;Ubicacion: 2cc1f7ef1f9490be5a5344e334c84abb-Barcelona-Barcelona&gt;, &lt;Ubicacion: cd63860fb92fff78e466aebd023679d2-Barcelona-Barcelona&gt;]&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>token</td>
+                    <td class="code"><pre>&#x27;aaabbccddeeffgghhiii&#x27;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>user</td>
+                    <td class="code"><pre>&lt;User: admin&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>w</td>
+                    <td class="code"><pre>2.1574538697865884</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>x_forwarded_for</td>
+                    <td class="code"><pre>&#x27;46.253.42.126, 169.254.1.1&#x27;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          
+        </li>
+      
+    </ul>
+  </div>
+  <form action="http://dpaste.com/" name="pasteform" id="pasteform" method="post">
+
+  <div id="pastebinTraceback" class="pastebin">
+    <input type="hidden" name="language" value="PythonConsole">
+    <input type="hidden" name="title"
+      value="AttributeError at /api">
+    <input type="hidden" name="source" value="Django Dpaste Agent">
+    <input type="hidden" name="poster" value="Django">
+    <textarea name="content" id="traceback_area" cols="140" rows="25">
+Environment:
+
+
+Request Method: POST
+Request URL: https://pro.homeprice.es/api
+
+Django Version: 3.1.2
+Python Version: 3.8.5
+Installed Applications:
+[&#x27;hp_old.apps.HpOldConfig&#x27;,
+ &#x27;hppro.apps.HpproConfig&#x27;,
+ &#x27;parsebox.apps.ParseboxConfig&#x27;,
+ &#x27;django.contrib.admin&#x27;,
+ &#x27;django.contrib.auth&#x27;,
+ &#x27;django.contrib.contenttypes&#x27;,
+ &#x27;django.contrib.sessions&#x27;,
+ &#x27;django.contrib.messages&#x27;,
+ &#x27;django.contrib.staticfiles&#x27;,
+ &#x27;django.contrib.humanize&#x27;,
+ &#x27;rosetta&#x27;]
+Installed Middleware:
+[&#x27;django.middleware.security.SecurityMiddleware&#x27;,
+ &#x27;django.contrib.sessions.middleware.SessionMiddleware&#x27;,
+ &#x27;django.middleware.locale.LocaleMiddleware&#x27;,
+ &#x27;django.middleware.common.CommonMiddleware&#x27;,
+ &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;,
+ &#x27;django.contrib.auth.middleware.AuthenticationMiddleware&#x27;,
+ &#x27;django.contrib.messages.middleware.MessageMiddleware&#x27;,
+ &#x27;django.middleware.clickjacking.XFrameOptionsMiddleware&#x27;]
+
+
+
+Traceback (most recent call last):
+  File "/layers/google.python.pip/pip/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/layers/google.python.pip/pip/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/layers/google.python.pip/pip/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/srv/hppro/views.py", line 567, in api
+    if &#x27;housing_type_id&#x27; in json_data and json_data[
+
+Exception Type: AttributeError at /api
+Exception Value: &#x27;int&#x27; object has no attribute &#x27;isnumeric&#x27;
+</textarea>
+  <br><br>
+  <input type="submit" value="Share this traceback on a public website">
+  </div>
+</form>
+</div>
+
+
+
+<div id="requestinfo">
+  <h2>Request information</h2>
+
+
+  
+    <h3 id="user-info">USER</h3>
+    <p>AnonymousUser</p>
+  
+
+  <h3 id="get-info">GET</h3>
+  
+    <p>No GET data</p>
+  
+
+  <h3 id="post-info">POST</h3>
+  
+    <p>No POST data</p>
+  
+  <h3 id="files-info">FILES</h3>
+  
+    <p>No FILES data</p>
+  
+
+
+  <h3 id="cookie-info">COOKIES</h3>
+  
+    <p>No cookie data</p>
+  
+
+  <h3 id="meta-info">META</h3>
+  <table class="req">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>CONTENT_LENGTH</td>
+          <td class="code"><pre>&#x27;515&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CONTENT_TYPE</td>
+          <td class="code"><pre>&#x27;charset=utf-8;&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_ACCEPT</td>
+          <td class="code"><pre>&#x27;*/*&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_ACCEPT_LANGUAGE</td>
+          <td class="code"><pre>&#x27;es&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_FORWARDED</td>
+          <td class="code"><pre>&#x27;for=&quot;46.253.42.126&quot;;proto=https&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_HOST</td>
+          <td class="code"><pre>&#x27;pro.homeprice.es&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_TRACEPARENT</td>
+          <td class="code"><pre>&#x27;00-220a6c1f1977d6111b67a3ac760872e9-dcc50933ca3f75cb-01&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_USER_AGENT</td>
+          <td class="code"><pre>&#x27;curl/7.55.1&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_APPENGINE_CITY</td>
+          <td class="code"><pre>&#x27;?&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_APPENGINE_CITYLATLONG</td>
+          <td class="code"><pre>&#x27;0.000000,0.000000&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_APPENGINE_COUNTRY</td>
+          <td class="code"><pre>&#x27;ES&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_APPENGINE_DEFAULT_NAMESPACE</td>
+          <td class="code"><pre>&#x27;gmail.com&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_APPENGINE_DEFAULT_VERSION_HOSTNAME</td>
+          <td class="code"><pre>&#x27;homepricepro.ew.r.appspot.com&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_APPENGINE_HTTPS</td>
+          <td class="code"><pre>&#x27;on&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_APPENGINE_REGION</td>
+          <td class="code"><pre>&#x27;ct&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_APPENGINE_REQUEST_LOG_ID</td>
+          <td class="code"><pre>&#x27;5f885a4e00ff0a72c64f00ff59a50001657e686f6d65707269636570726f0001323032303130313574313234393536000100&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_APPENGINE_TIMEOUT_MS</td>
+          <td class="code"><pre>&#x27;599999&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_APPENGINE_USER_IP</td>
+          <td class="code"><pre>&#x27;46.253.42.126&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_CLOUD_TRACE_CONTEXT</td>
+          <td class="code"><pre>&#x27;220a6c1f1977d6111b67a3ac760872e9/15908131376797283787;o=1&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_FORWARDED_FOR</td>
+          <td class="code"><pre>&#x27;46.253.42.126, 169.254.1.1&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_FORWARDED_PROTO</td>
+          <td class="code"><pre>&#x27;https&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_X_GOOGLE_APPS_METADATA</td>
+          <td class="code"><pre>&#x27;domain=gmail.com,host=pro.homeprice.es&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PATH_INFO</td>
+          <td class="code"><pre>&#x27;/api&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>QUERY_STRING</td>
+          <td class="code"><pre>&#x27;&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>RAW_URI</td>
+          <td class="code"><pre>&#x27;/api&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>REMOTE_ADDR</td>
+          <td class="code"><pre>&#x27;127.0.0.1&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>REMOTE_PORT</td>
+          <td class="code"><pre>&#x27;40533&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>REQUEST_METHOD</td>
+          <td class="code"><pre>&#x27;POST&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SCRIPT_NAME</td>
+          <td class="code"><pre>&#x27;&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_NAME</td>
+          <td class="code"><pre>&#x27;0.0.0.0&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_PORT</td>
+          <td class="code"><pre>&#x27;8081&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_PROTOCOL</td>
+          <td class="code"><pre>&#x27;HTTP/1.1&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_SOFTWARE</td>
+          <td class="code"><pre>&#x27;gunicorn/20.0.4&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>gunicorn.socket</td>
+          <td class="code"><pre>&lt;socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=(&#x27;127.0.0.1&#x27;, 8081), raddr=(&#x27;127.0.0.1&#x27;, 40533)&gt;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.errors</td>
+          <td class="code"><pre>&lt;gunicorn.http.wsgi.WSGIErrorsWrapper object at 0x3ebd40123730&gt;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.file_wrapper</td>
+          <td class="code"><pre>&lt;class &#x27;gunicorn.http.wsgi.FileWrapper&#x27;&gt;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.input</td>
+          <td class="code"><pre>&lt;gunicorn.http.body.Body object at 0x3ebd401236d0&gt;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.input_terminated</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.multiprocess</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.multithread</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.run_once</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.url_scheme</td>
+          <td class="code"><pre>&#x27;https&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.version</td>
+          <td class="code"><pre>(1, 0)</pre></td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+  <h3 id="settings-info">Settings</h3>
+  <h4>Using settings module <code>hppro.settings</code></h4>
+  <table class="req">
+    <thead>
+      <tr>
+        <th>Setting</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>ABSOLUTE_URL_OVERRIDES</td>
+          <td class="code"><pre>{}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>ADMINS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>ALLOWED_HOSTS</td>
+          <td class="code"><pre>[&#x27;.appspot.com&#x27;, &#x27;.homeprice.es&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>APPEND_SLASH</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>AUTHENTICATION_BACKENDS</td>
+          <td class="code"><pre>[&#x27;django.contrib.auth.backends.ModelBackend&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>AUTH_PASSWORD_VALIDATORS</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>AUTH_USER_MODEL</td>
+          <td class="code"><pre>&#x27;auth.User&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>BASE_DIR</td>
+          <td class="code"><pre>&#x27;/srv&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CACHES</td>
+          <td class="code"><pre>{&#x27;default&#x27;: {&#x27;BACKEND&#x27;: &#x27;django.core.cache.backends.locmem.LocMemCache&#x27;}}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CACHE_MIDDLEWARE_ALIAS</td>
+          <td class="code"><pre>&#x27;default&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CACHE_MIDDLEWARE_KEY_PREFIX</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CACHE_MIDDLEWARE_SECONDS</td>
+          <td class="code"><pre>600</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_AGE</td>
+          <td class="code"><pre>31449600</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_DOMAIN</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_HTTPONLY</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_NAME</td>
+          <td class="code"><pre>&#x27;csrftoken&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_PATH</td>
+          <td class="code"><pre>&#x27;/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_SAMESITE</td>
+          <td class="code"><pre>&#x27;Lax&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_SECURE</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_FAILURE_VIEW</td>
+          <td class="code"><pre>&#x27;django.views.csrf.csrf_failure&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_HEADER_NAME</td>
+          <td class="code"><pre>&#x27;HTTP_X_CSRFTOKEN&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_TRUSTED_ORIGINS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_USE_SESSIONS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATABASES</td>
+          <td class="code"><pre>{&#x27;default&#x27;: {&#x27;ATOMIC_REQUESTS&#x27;: False,
+             &#x27;AUTOCOMMIT&#x27;: True,
+             &#x27;CONN_MAX_AGE&#x27;: 0,
+             &#x27;ENGINE&#x27;: &#x27;django.db.backends.mysql&#x27;,
+             &#x27;HOST&#x27;: &#x27;lhcp1107.webapps.net&#x27;,
+             &#x27;NAME&#x27;: &#x27;g029eaff_homeprice_pro&#x27;,
+             &#x27;OPTIONS&#x27;: {&#x27;sql_mode&#x27;: &#x27;STRICT_TRANS_TABLES&#x27;},
+             &#x27;PASSWORD&#x27;: &#x27;********************&#x27;,
+             &#x27;PORT&#x27;: &#x27;&#x27;,
+             &#x27;TEST&#x27;: {&#x27;CHARSET&#x27;: None,
+                      &#x27;COLLATION&#x27;: None,
+                      &#x27;MIGRATE&#x27;: True,
+                      &#x27;MIRROR&#x27;: None,
+                      &#x27;NAME&#x27;: None},
+             &#x27;TIME_ZONE&#x27;: None,
+             &#x27;USER&#x27;: &#x27;g029eaff_admin&#x27;},
+ &#x27;g029eaff_bpo_plataforma&#x27;: {&#x27;ATOMIC_REQUESTS&#x27;: False,
+                             &#x27;AUTOCOMMIT&#x27;: True,
+                             &#x27;CONN_MAX_AGE&#x27;: 0,
+                             &#x27;ENGINE&#x27;: &#x27;django.db.backends.mysql&#x27;,
+                             &#x27;HOST&#x27;: &#x27;lhcp1107.webapps.net&#x27;,
+                             &#x27;NAME&#x27;: &#x27;g029eaff_bpo_plataforma&#x27;,
+                             &#x27;OPTIONS&#x27;: {&#x27;sql_mode&#x27;: &#x27;STRICT_TRANS_TABLES&#x27;},
+                             &#x27;PASSWORD&#x27;: &#x27;********************&#x27;,
+                             &#x27;PORT&#x27;: &#x27;&#x27;,
+                             &#x27;TEST&#x27;: {&#x27;CHARSET&#x27;: None,
+                                      &#x27;COLLATION&#x27;: None,
+                                      &#x27;MIGRATE&#x27;: True,
+                                      &#x27;MIRROR&#x27;: None,
+                                      &#x27;NAME&#x27;: None},
+                             &#x27;TIME_ZONE&#x27;: None,
+                             &#x27;USER&#x27;: &#x27;g029eaff_admin&#x27;},
+ &#x27;g029eaff_megatro&#x27;: {&#x27;ATOMIC_REQUESTS&#x27;: False,
+                      &#x27;AUTOCOMMIT&#x27;: True,
+                      &#x27;CONN_MAX_AGE&#x27;: 0,
+                      &#x27;ENGINE&#x27;: &#x27;django.db.backends.mysql&#x27;,
+                      &#x27;HOST&#x27;: &#x27;lhcp1107.webapps.net&#x27;,
+                      &#x27;NAME&#x27;: &#x27;g029eaff_next_homeprice&#x27;,
+                      &#x27;OPTIONS&#x27;: {&#x27;sql_mode&#x27;: &#x27;STRICT_TRANS_TABLES&#x27;},
+                      &#x27;PASSWORD&#x27;: &#x27;********************&#x27;,
+                      &#x27;PORT&#x27;: &#x27;&#x27;,
+                      &#x27;TEST&#x27;: {&#x27;CHARSET&#x27;: None,
+                               &#x27;COLLATION&#x27;: None,
+                               &#x27;MIGRATE&#x27;: True,
+                               &#x27;MIRROR&#x27;: None,
+                               &#x27;NAME&#x27;: None},
+                      &#x27;TIME_ZONE&#x27;: None,
+                      &#x27;USER&#x27;: &#x27;g029eaff_admin&#x27;}}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATABASE_ROUTERS</td>
+          <td class="code"><pre>[&#x27;hp_old.dbRouter.DBRouter&#x27;, &#x27;parsebox.dbRouter.DBRouter&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATA_UPLOAD_MAX_MEMORY_SIZE</td>
+          <td class="code"><pre>2621440</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATA_UPLOAD_MAX_NUMBER_FIELDS</td>
+          <td class="code"><pre>1000</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATETIME_FORMAT</td>
+          <td class="code"><pre>&#x27;N j, Y, P&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATETIME_INPUT_FORMATS</td>
+          <td class="code"><pre>[&#x27;%Y-%m-%d %H:%M:%S&#x27;,
+ &#x27;%Y-%m-%d %H:%M:%S.%f&#x27;,
+ &#x27;%Y-%m-%d %H:%M&#x27;,
+ &#x27;%m/%d/%Y %H:%M:%S&#x27;,
+ &#x27;%m/%d/%Y %H:%M:%S.%f&#x27;,
+ &#x27;%m/%d/%Y %H:%M&#x27;,
+ &#x27;%m/%d/%y %H:%M:%S&#x27;,
+ &#x27;%m/%d/%y %H:%M:%S.%f&#x27;,
+ &#x27;%m/%d/%y %H:%M&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATE_FORMAT</td>
+          <td class="code"><pre>&#x27;N j, Y&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATE_INPUT_FORMATS</td>
+          <td class="code"><pre>[&#x27;%Y-%m-%d&#x27;,
+ &#x27;%m/%d/%Y&#x27;,
+ &#x27;%m/%d/%y&#x27;,
+ &#x27;%b %d %Y&#x27;,
+ &#x27;%b %d, %Y&#x27;,
+ &#x27;%d %b %Y&#x27;,
+ &#x27;%d %b, %Y&#x27;,
+ &#x27;%B %d %Y&#x27;,
+ &#x27;%B %d, %Y&#x27;,
+ &#x27;%d %B %Y&#x27;,
+ &#x27;%d %B, %Y&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEBUG</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEBUG_PROPAGATE_EXCEPTIONS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DECIMAL_SEPARATOR</td>
+          <td class="code"><pre>&#x27;.&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_CHARSET</td>
+          <td class="code"><pre>&#x27;utf-8&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_EXCEPTION_REPORTER</td>
+          <td class="code"><pre>&#x27;django.views.debug.ExceptionReporter&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_EXCEPTION_REPORTER_FILTER</td>
+          <td class="code"><pre>&#x27;django.views.debug.SafeExceptionReporterFilter&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_FILE_STORAGE</td>
+          <td class="code"><pre>&#x27;django.core.files.storage.FileSystemStorage&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_FROM_EMAIL</td>
+          <td class="code"><pre>&#x27;webmaster@localhost&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_HASHING_ALGORITHM</td>
+          <td class="code"><pre>&#x27;sha256&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_INDEX_TABLESPACE</td>
+          <td class="code"><pre>&#x27;&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_TABLESPACE</td>
+          <td class="code"><pre>&#x27;&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DISALLOWED_USER_AGENTS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_BACKEND</td>
+          <td class="code"><pre>&#x27;django.core.mail.backends.smtp.EmailBackend&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_HOST</td>
+          <td class="code"><pre>&#x27;authsmtp.securemail.pro&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_HOST_PASSWORD</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_HOST_USER</td>
+          <td class="code"><pre>&#x27;homeprice@homeprice.es&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_PORT</td>
+          <td class="code"><pre>465</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_SSL_CERTFILE</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_SSL_KEYFILE</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_SUBJECT_PREFIX</td>
+          <td class="code"><pre>&#x27;[Django] &#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_TIMEOUT</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_USE_LOCALTIME</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_USE_SSL</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_USE_TLS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>ENVIRONMENT</td>
+          <td class="code"><pre>&#x27;GCLOUD&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_DIRECTORY_PERMISSIONS</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_HANDLERS</td>
+          <td class="code"><pre>[&#x27;django.core.files.uploadhandler.MemoryFileUploadHandler&#x27;,
+ &#x27;django.core.files.uploadhandler.TemporaryFileUploadHandler&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_MAX_MEMORY_SIZE</td>
+          <td class="code"><pre>2621440</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_PERMISSIONS</td>
+          <td class="code"><pre>420</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_TEMP_DIR</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FIRST_DAY_OF_WEEK</td>
+          <td class="code"><pre>0</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FIXTURE_DIRS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FORCE_SCRIPT_NAME</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FORMAT_MODULE_PATH</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FORM_RENDERER</td>
+          <td class="code"><pre>&#x27;django.forms.renderers.DjangoTemplates&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>GOOGLE_API_KEY</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>IGNORABLE_404_URLS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>INSTALLED_APPS</td>
+          <td class="code"><pre>[&#x27;hp_old.apps.HpOldConfig&#x27;,
+ &#x27;hppro.apps.HpproConfig&#x27;,
+ &#x27;parsebox.apps.ParseboxConfig&#x27;,
+ &#x27;django.contrib.admin&#x27;,
+ &#x27;django.contrib.auth&#x27;,
+ &#x27;django.contrib.contenttypes&#x27;,
+ &#x27;django.contrib.sessions&#x27;,
+ &#x27;django.contrib.messages&#x27;,
+ &#x27;django.contrib.staticfiles&#x27;,
+ &#x27;django.contrib.humanize&#x27;,
+ &#x27;rosetta&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>INTERNAL_IPS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGES</td>
+          <td class="code"><pre>[(&#x27;ca&#x27;, &#x27;Catalán&#x27;), (&#x27;es&#x27;, &#x27;Castellano&#x27;), (&#x27;en&#x27;, &#x27;Inglés&#x27;)]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGES_BIDI</td>
+          <td class="code"><pre>[&#x27;he&#x27;, &#x27;ar&#x27;, &#x27;ar-dz&#x27;, &#x27;fa&#x27;, &#x27;ur&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_CODE</td>
+          <td class="code"><pre>&#x27;ca&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_AGE</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_DOMAIN</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_HTTPONLY</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_NAME</td>
+          <td class="code"><pre>&#x27;language&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_PATH</td>
+          <td class="code"><pre>&#x27;/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_SAMESITE</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_SECURE</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOCALE_PATHS</td>
+          <td class="code"><pre>[&#x27;/srv/locale&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGGING</td>
+          <td class="code"><pre>{}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGGING_CONFIG</td>
+          <td class="code"><pre>&#x27;logging.config.dictConfig&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGIN_REDIRECT_URL</td>
+          <td class="code"><pre>&#x27;/accounts/profile/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGIN_URL</td>
+          <td class="code"><pre>&#x27;/accounts/login/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGOUT_REDIRECT_URL</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MANAGERS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MEDIA_ROOT</td>
+          <td class="code"><pre>&#x27;&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MEDIA_URL</td>
+          <td class="code"><pre>&#x27;/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MESSAGE_STORAGE</td>
+          <td class="code"><pre>&#x27;django.contrib.messages.storage.fallback.FallbackStorage&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MIDDLEWARE</td>
+          <td class="code"><pre>[&#x27;django.middleware.security.SecurityMiddleware&#x27;,
+ &#x27;django.contrib.sessions.middleware.SessionMiddleware&#x27;,
+ &#x27;django.middleware.locale.LocaleMiddleware&#x27;,
+ &#x27;django.middleware.common.CommonMiddleware&#x27;,
+ &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;,
+ &#x27;django.contrib.auth.middleware.AuthenticationMiddleware&#x27;,
+ &#x27;django.contrib.messages.middleware.MessageMiddleware&#x27;,
+ &#x27;django.middleware.clickjacking.XFrameOptionsMiddleware&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MIGRATION_MODULES</td>
+          <td class="code"><pre>{}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MONTH_DAY_FORMAT</td>
+          <td class="code"><pre>&#x27;F j&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>NUMBER_GROUPING</td>
+          <td class="code"><pre>0</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PASSWORD_HASHERS</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PASSWORD_RESET_TIMEOUT</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PASSWORD_RESET_TIMEOUT_DAYS</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PREPEND_WWW</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>ROOT_URLCONF</td>
+          <td class="code"><pre>&#x27;hppro.urls&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECRET_KEY</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_BROWSER_XSS_FILTER</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_CONTENT_TYPE_NOSNIFF</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_HSTS_INCLUDE_SUBDOMAINS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_HSTS_PRELOAD</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_HSTS_SECONDS</td>
+          <td class="code"><pre>0</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_PROXY_SSL_HEADER</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_REDIRECT_EXEMPT</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_REFERRER_POLICY</td>
+          <td class="code"><pre>&#x27;same-origin&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_SSL_HOST</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_SSL_REDIRECT</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_EMAIL</td>
+          <td class="code"><pre>&#x27;root@localhost&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_CACHE_ALIAS</td>
+          <td class="code"><pre>&#x27;default&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_AGE</td>
+          <td class="code"><pre>1209600</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_DOMAIN</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_HTTPONLY</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_NAME</td>
+          <td class="code"><pre>&#x27;sessionid&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_PATH</td>
+          <td class="code"><pre>&#x27;/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_SAMESITE</td>
+          <td class="code"><pre>&#x27;Lax&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_SECURE</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_ENGINE</td>
+          <td class="code"><pre>&#x27;django.contrib.sessions.backends.db&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_EXPIRE_AT_BROWSER_CLOSE</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_FILE_PATH</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_SAVE_EVERY_REQUEST</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_SERIALIZER</td>
+          <td class="code"><pre>&#x27;django.contrib.sessions.serializers.JSONSerializer&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SETTINGS_MODULE</td>
+          <td class="code"><pre>&#x27;hppro.settings&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SHORT_DATETIME_FORMAT</td>
+          <td class="code"><pre>&#x27;m/d/Y P&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SHORT_DATE_FORMAT</td>
+          <td class="code"><pre>&#x27;m/d/Y&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SIGNING_BACKEND</td>
+          <td class="code"><pre>&#x27;django.core.signing.TimestampSigner&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SILENCED_SYSTEM_CHECKS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATICFILES_DIRS</td>
+          <td class="code"><pre>[&#x27;/srv/static&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATICFILES_FINDERS</td>
+          <td class="code"><pre>[&#x27;django.contrib.staticfiles.finders.FileSystemFinder&#x27;,
+ &#x27;django.contrib.staticfiles.finders.AppDirectoriesFinder&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATICFILES_STORAGE</td>
+          <td class="code"><pre>&#x27;django.contrib.staticfiles.storage.StaticFilesStorage&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATIC_ROOT</td>
+          <td class="code"><pre>&#x27;/static&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATIC_URL</td>
+          <td class="code"><pre>&#x27;/static/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TEMPLATES</td>
+          <td class="code"><pre>[{&#x27;APP_DIRS&#x27;: True,
+  &#x27;BACKEND&#x27;: &#x27;django.template.backends.django.DjangoTemplates&#x27;,
+  &#x27;DIRS&#x27;: [&#x27;/srv/templates&#x27;],
+  &#x27;OPTIONS&#x27;: {&#x27;context_processors&#x27;: [&#x27;django.template.context_processors.debug&#x27;,
+                                     &#x27;django.template.context_processors.request&#x27;,
+                                     &#x27;django.contrib.auth.context_processors.auth&#x27;,
+                                     &#x27;django.contrib.messages.context_processors.messages&#x27;]}}]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TEST_NON_SERIALIZED_APPS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TEST_RUNNER</td>
+          <td class="code"><pre>&#x27;django.test.runner.DiscoverRunner&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>THOUSAND_SEPARATOR</td>
+          <td class="code"><pre>&#x27;,&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TIME_FORMAT</td>
+          <td class="code"><pre>&#x27;P&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TIME_INPUT_FORMATS</td>
+          <td class="code"><pre>[&#x27;%H:%M:%S&#x27;, &#x27;%H:%M:%S.%f&#x27;, &#x27;%H:%M&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TIME_ZONE</td>
+          <td class="code"><pre>&#x27;CET&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_I18N</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_L10N</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_THOUSAND_SEPARATOR</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_TZ</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_X_FORWARDED_HOST</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_X_FORWARDED_PORT</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>WSGI_APPLICATION</td>
+          <td class="code"><pre>&#x27;hppro.wsgi.application&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>X_FRAME_OPTIONS</td>
+          <td class="code"><pre>&#x27;DENY&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>YEAR_MONTH_FORMAT</td>
+          <td class="code"><pre>&#x27;F Y&#x27;</pre></td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+</div>
+
+  <div id="explanation">
+    <p>
+      You're seeing this error because you have <code>DEBUG = True</code> in your
+      Django settings file. Change that to <code>False</code>, and Django will
+      display a standard page generated by the handler for this status code.
+    </p>
+  </div>
+
+</body>
+</html>
