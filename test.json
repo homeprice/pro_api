@@ -12,15 +12,15 @@
   "garage_id": 2,
   "features": {
     "laundry": true,
-    "terrace": true,
+    "terrace": false,
     "double_glazed_window": true,
-    "elevator": true,
+    "elevator": false,
     "heating": true,
-    "balcony": true,
+    "balcony": false,
     "garden": true,
-    "air_conditioner": true,
+    "air_conditioner": false,
     "boxroom": true,
-    "solar_panel": true,
+    "solar_panel": false,
     "pool": true,
     "gas": false
   }
