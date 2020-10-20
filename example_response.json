@@ -161,18 +161,8 @@
     "quality_finishes": "Medios",
     "garage": "Exterior",
     "features": [
-      "Lavadero",
-      "Aire acondicionado",
-      "Balc\u00f3n",
-      "Trastero",
-      "Ventanas de doble cristal",
-      "Ascensor",
-      "Jard\u00edn",
       "Gas",
-      "Calefacci\u00f3n",
-      "Piscina",
-      "Paneles solares",
-      "Terraza"
+      "Piscina"
     ]
   },
   "lat": 41.3827775,
@@ -190,13 +180,13 @@
   ],
   "area": 100.0,
   "operation": "compra",
-  "date": "2020-10-16T08:07:27.141531+00:00",
-  "price_cor": 204.27695559705364,
-  "new_price": 484693.5037348273,
-  "new_meter_price": 4846.935037348273,
-  "fast_sale": 339285.4526143791,
-  "market_sale": 426530.283286648,
-  "unlikely_sale": 484693.5037348273,
-  "html": "Encontrados 9 registros en 100m<br>Entre las superficies: 100m\u00b2 - 100m\u00b2<br> 4 habitaciones<br>Tipo activo: <b>Vivienda unifamiliar aislada (chalet)</b>, 0.015%, 69.64\u20ac/m\u00b2<br>Conservaci\u00f3n: <b>Medio</b>, -0.1%, -464.27\u20ac/m\u00b2<br>Calidad de los acabados: <b>Medios</b>, 0.0%, 0.00\u20ac/m\u00b2<br>Garaje: <b>Exterior</b>, 0.015%, 69.64\u20ac/m\u00b2<br><u>Caracter\u00edsticas:</u><br>- Lavadero: 0.5%, 23.21\u20ac/m\u00b2<br>- Aire acondicionado: 0.5%, 23.21\u20ac/m\u00b2<br>- Balc\u00f3n: 0.5%, 23.21\u20ac/m\u00b2<br>- Trastero: 1.0%, 46.43\u20ac/m\u00b2<br>- Doble cristal: 0.1%, 4.64\u20ac/m\u00b2<br>- Ascensor: 1.5%, 69.64\u20ac/m\u00b2<br>- Jard\u00edn: 1.5%, 69.64\u20ac/m\u00b2<br>- Gas: 0.1%, 4.64\u20ac/m\u00b2<br>- Calefacci\u00f3n: 0.5%, 23.21\u20ac/m\u00b2<br>- Piscina: 2.5%, 116.07\u20ac/m\u00b2<br>- Paneles solares: 0.2%, 9.29\u20ac/m\u00b2<br>- Terraza: 2.5%, 116.07\u20ac/m\u00b2<br><u>Tiempo operaci\u00f3n:</u><br>Immediato: -0.30%, 3 meses: -0.12%, 6 meses: 0.00%<br>Correcci\u00f3n global de la repercusi\u00f3n: 204.28\u20ac/m\u00b2<br>Repercusi\u00f3n resultante: 4,846.94\u20ac/m\u00b2 x 100.00m\u00b2 = 484,693.50\u20ac<br>Tiempo global del proceso: 0.98 segundos",
-  "process_time": 0.9836671352386475
+  "date": "2020-10-20T09:29:41.802416+00:00",
+  "price_cor": -204.2769555970537,
+  "new_price": 443838.1126154166,
+  "new_meter_price": 4438.381126154166,
+  "fast_sale": 310686.6788307916,
+  "market_sale": 390577.5391015666,
+  "unlikely_sale": 443838.1126154166,
+  "html": "Encontrados 9 registros en 100m<br>Entre las superficies: 100m\u00b2 - 100m\u00b2<br> 4 habitaciones<br>Tipo activo: <b>Vivienda unifamiliar aislada (chalet)</b>, 0.015%, 69.64\u20ac/m\u00b2<br>Conservaci\u00f3n: <b>Medio</b>, -0.1%, -464.27\u20ac/m\u00b2<br>Calidad de los acabados: <b>Medios</b>, 0.0%, 0.00\u20ac/m\u00b2<br>Garaje: <b>Exterior</b>, 0.015%, 69.64\u20ac/m\u00b2<br><u>Caracter\u00edsticas:</u><br>- Gas: 0.1%, 4.64\u20ac/m\u00b2<br>- Piscina: 2.5%, 116.07\u20ac/m\u00b2<br><u>Tiempo operaci\u00f3n:</u><br>Venta r\u00e1pida: -0.30%, De mercado: -0.12%, Poco probable: 0.00%<br>Correcci\u00f3n global de la repercusi\u00f3n: -204.28\u20ac/m\u00b2<br>Repercusi\u00f3n resultante: 4,438.38\u20ac/m\u00b2 x 100.00m\u00b2 = 443,838.11\u20ac<br>Tiempo global del proceso: 14.58 segundos",
+  "process_time": 14.58388876914978
 }

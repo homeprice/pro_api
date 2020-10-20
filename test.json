@@ -10,18 +10,5 @@
   "conservation_id": 3,
   "quality_finishes_id": 3,
   "garage_id": 2,
-  "features": {
-    "laundry": true,
-    "terrace": false,
-    "double_glazed_window": true,
-    "elevator": false,
-    "heating": true,
-    "balcony": false,
-    "garden": true,
-    "air_conditioner": false,
-    "boxroom": true,
-    "solar_panel": false,
-    "pool": true,
-    "gas": false
-  }
+  "features": ["pool","gas"]
 }
